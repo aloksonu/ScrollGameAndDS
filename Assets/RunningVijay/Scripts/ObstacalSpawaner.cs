@@ -10,7 +10,9 @@ public class ObstacalSpawaner : MonoBehaviour
     // Made by Unity
     void Start()
     {
-        SpawnObstacals();
+        //SpawnObstacals();
+
+        InvokeRepeating(nameof(SpawnObstacals),0f, 4f);
     }
 
     // Update is called once per frame
