@@ -29,6 +29,7 @@ public class SantaManager : MonoBehaviour
         {
             //sanataAnimator.SetTrigger("SantaDead");
             sanataAnimator.Play("ASentaDead");
+            //PlayerController.Instance.gameOverPanel.SetActive(true);
             }
         else if ((Input.GetKeyDown(KeyCode.J)))
         {
@@ -49,7 +50,7 @@ public class SantaManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             sanataAnimator.Play("ASentaDead");
-
+            PlayerController.Instance.gameOverPanel.SetActive(true);
             //playerController.isGameOver = true;
             PlayerController.Instance.isGameOver = true;
 

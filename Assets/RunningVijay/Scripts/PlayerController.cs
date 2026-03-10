@@ -9,12 +9,15 @@ public class PlayerController : MonoBehaviour
 
     public bool isGrounded;
     public bool isGameOver;
+    public GameObject gameOverPanel;
 
     public static PlayerController Instance;
 
+    public int value;
+
     private void Awake()
     {
-        //if (Instance == null)
+        if (Instance == null)
         Instance = this;
     }
 
@@ -26,6 +29,7 @@ public class PlayerController : MonoBehaviour
         jumpForce = 7f;
         rb2d = GetComponent<Rigidbody2D>();
         //bc2d = GetComponent<BoxCollider2D>();
+        value = 5;
     }
 
     // Update is called once per frame
